@@ -25,4 +25,7 @@ public class PlayerControls : MonoBehaviour {
             rb.velocity = Vector2.up * velocity;
         }
     }
+    void OnCollisionEnter2D(){
+          GameObject.Find("GameController").GetComponent<GameController>().gameOver();
+    }
 }
